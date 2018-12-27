@@ -1,0 +1,34 @@
+.top_bar{background:#F16223; padding:5px 0;}
+.social_icons{margin-right:5px}
+.contact_info{color:#; font-size:16px;}
+
+.myMenu{margin-top:27px;}
+
+.myMenu .navbar-default{background:none; border:none;}
+
+.myMenu .navbar-nav .active a, .myMenu .navbar-nav .active a:hover{background:#F16223; color:#FDFDFD;}
+
+.myMenu .navbar-nav li a:hover{background:#F16223; color:#FDFDFD;}
+
+.background{background: radial-gradient(circle, #F983C3,#313C8B); padding:25px 0;}
+
+.background h1{color:#FDFDFD}
+
+.background1{background: radial-gradient(circle, #595904,#040459); padding:25px 0;}
+
+.background1 p{color:#FDFDFD; margin-top:10px; margin-bottom:5px;}
+
+.background1 h3{color:#FDFDFD; margin-top:10px; margin-bottom:5px;}
+.background1 h5{color:#FDFDFD; margin-top:10px; margin-bottom:5px; font-size:18px;}
+
+.background1 ul li a{color:#FDFDFD; font-size:15px;}
+
+@media (max-width:12000px){
+	.myMenu .pull-right{float:none !important;}
+}
+
+@media (max-width:603px){
+	.myMenu [class*="col-"]{
+	margin-bottom:25px;
+	}
+}
