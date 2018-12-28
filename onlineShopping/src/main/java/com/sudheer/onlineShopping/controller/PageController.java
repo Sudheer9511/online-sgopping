@@ -29,8 +29,8 @@ public class PageController {
 	public ModelAndView contact() {
 		ModelAndView modelAndView = new ModelAndView("page");
 		modelAndView.addObject("title","Contact-Us");
-		modelAndView.addObject("userClick"
-				+ "contact",true);		
+		modelAndView.addObject("userClickContact",true);		
 		return modelAndView;
 	}
 }
+ 
