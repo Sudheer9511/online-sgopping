@@ -14,13 +14,8 @@
 
         <div class="col-lg-3">
 
-          <h1 class="my-4">S!dFactory</h1>
-          <div class="list-group">
-            <a href="#" class="list-group-item">Mobile</a>
-            <a href="#" class="list-group-item">Laptop</a>
-            <a href="#" class="list-group-item">Tablet</a>
-          </div>
-
+			<%@ include file="./shared/sidebar.jsp" %>
+		
         </div>
         <!-- /.col-lg-3 -->
 
@@ -31,16 +26,20 @@
               <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
               <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
               <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
             </ol>
             <div class="carousel-inner" role="listbox">
               <div class="carousel-item active">
-                <img class="d-block img-fluid" src="${images}/pic-1.jpg" alt="First slide" class="img-responsive">
+                <img class="d-block img-fluid" src="${images}/banner1.jpg" alt="First slide" class="img-responsive">
               </div>
               <div class="carousel-item">
-                <img class="d-block img-fluid" src="${images}/pic-2.jpg" alt="Second slide" class="img-responsive">
+                <img class="d-block img-fluid" src="${images}/banner2.jpg" alt="Second slide" class="img-responsive">
               </div>
               <div class="carousel-item">
-                <img class="d-block img-fluid" src="${images}/pic-3.jpg" alt="Third slide" class="img-responsive">
+                <img class="d-block img-fluid" src="${images}/banner3.jpg" alt="Third slide" class="img-responsive">
+              </div>
+              <div class="carousel-item">
+                <img class="d-block img-fluid" src="${images}/banner4.jpg" alt="Third slide" class="img-responsive">
               </div>
             </div>
             <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">

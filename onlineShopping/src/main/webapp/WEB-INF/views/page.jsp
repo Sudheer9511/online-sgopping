@@ -49,25 +49,41 @@
 
 		<div class="content">
 
-			<!-- Page Content -->
-
-			<!-- Load only when user clicks Home -->
-			<c:if test="${userClickHome == true}">
-				<%@ include file="home.jsp"%>
-			</c:if>
-			<!-- End of Home page -->
-
-			<!-- Load only when user clicks About -->
-			<c:if test="${userClickAbout == true}">
-				<%@ include file="about.jsp"%>
-			</c:if>
-			<!-- End of About page -->
-
-			<!-- Load only when user clicks Contact -->
-			<c:if test="${userClickContact == true}">
-				<%@ include file="contact.jsp"%>
-			</c:if>
-			<!-- End of Contact page -->
+				<!-- Page Content -->
+					<!-- Load only when user clicks Home -->
+					<c:if test="${userClickHome == true}">
+						<%@ include file="home.jsp"%>
+					</c:if>
+					<!-- End of Home page -->
+		
+					<!-- Load only when user clicks About -->
+					<div style="margin:15px; padding:15px;">
+						<c:if test="${userClickAbout == true}">
+							<%@ include file="about.jsp"%>
+						</c:if>
+					</div>
+					<!-- End of About page -->
+		
+					<!-- Load only when user clicks Contact -->
+					<c:if test="${userClickContact == true}">
+						<%@ include file="contact.jsp"%>
+					</c:if>
+					
+					<!-- Load only when user clicks ViwProducts -->
+					<div style="margin:-15px; padding:-15px;">
+						<c:if test="${userClickAllProducts == true}"><!--  or userClickCategoryProducts == true -->
+							<%@ include file="listProducts.jsp"%>
+						</c:if>
+					</div>
+					
+					<!-- Load only when user clicks ViwCategory -->
+					<div style="margin:-15px; padding:-15px;">
+						<c:if test="${userClickCategoryProducts == true}">
+							<%@ include file="listProducts.jsp"%>
+						</c:if>
+					</div>
+					
+				<!-- End of Contact page -->
 
 			<!-- End of Page Content -->
 
