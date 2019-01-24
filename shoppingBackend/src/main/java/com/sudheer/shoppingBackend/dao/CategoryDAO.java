@@ -2,11 +2,17 @@ package com.sudheer.shoppingBackend.dao;
 
 import java.util.List;
 
-import com.sudheer.shoppingBackend.dto.Category;
+import org.springframework.stereotype.Repository;
 
+import com.sudheer.shoppingBackend.dto.Category;
+ 
 public interface CategoryDAO {
 	
-	 List<Category> list();
-
 	Category get(int id);
+	List<Category> list();
+	boolean add(Category category);
+	
+	boolean update(Category category);
+
+	boolean delete(Category category);
 }
