@@ -19,12 +19,12 @@ import com.sudheer.shoppingBackend.dao.CategoryDAO;
 import com.sudheer.shoppingBackend.daoimpl.CategoryDAOImpl;
 
 @Configuration
-@ComponentScan(basePackages = { "com.sudheer.shoppingBackend" })
+@ComponentScan(basePackages = { "com.sudheer.shoppingBackend.dto" })
 @EnableTransactionManagement
 public class HibernateConfig {
 
 	// Change the below based on the DBMS you choose
-	private final static String DATABASE_URL = "jdbc:h2:tcp://localhost/~/onlineshopping2";
+	private final static String DATABASE_URL = "jdbc:h2:tcp://localhost/~/online_shopping";
 	private final static String DATABASE_DRIVER = "org.h2.Driver";
 	private final static String DATABASE_DIALECT = "org.hibernate.dialect.H2Dialect";
 	private final static String DATABASE_USERNAME = "Sudheer";
@@ -34,7 +34,6 @@ public class HibernateConfig {
 
 	@Bean
 	public DataSource getDataSource() {
-          System.out.println("hii");
           DriverManagerDataSource dataSource = new DriverManagerDataSource();
 		// providing Database Connection Information
 		dataSource.setDriverClassName(DATABASE_DRIVER);
@@ -50,13 +49,12 @@ public class HibernateConfig {
 
 	@Bean
 	public LocalSessionFactoryBean getSessionFactory() {
-
-		 System.out.println("welcome");
 		 LocalSessionFactoryBean sessionFactory = new LocalSessionFactoryBean();
 	        sessionFactory.setDataSource(getDataSource());
-	        sessionFactory.setPackagesToScan(new String[] { "com.sudhir.shoppingBackend" });
+	        sessionFactory.setPackagesToScan(new String[] { "com.sudheer.shoppingBackend.dto" });
 	        sessionFactory.setHibernateProperties(getHibernateProperties());
 	        return sessionFactory;
+	        
 
 	}
 

@@ -22,38 +22,6 @@ public class CategoryDAOImpl implements CategoryDAO {
 	private SessionFactory sessionFactory;
 	
 	
-	/*private static List<Category> categories = new ArrayList<>();
-	
-	static{
-			
-		Category category = new Category();
-	 //Adding first Category
-	 category.setId(1);
-	 category.setName("Television");
-	 category.setDescription("This is some discription for Television");
-	 category.setImageURL("CAT_1.png");
-	 
-	 categories.add(category);
-	 
-	 
-	 //Adding first Category
-	 category.setId(2);
-	 category.setName("Mobile");
-	 category.setDescription("This is some discription for Mobile");
-	 category.setImageURL("CAT_2.png");
-	 
-	 categories.add(category);
-	 
-	 
-	 //Adding first Category
-	 category.setId(3);
-	 category.setName("Laptop");
-	 category.setDescription("This is some discription for Laptop");
-	 category.setImageURL("CAT_3.png");
-	 
-	 categories.add(category);
-	 }*/
-	
 	public List<Category> list() {
 
 	String selectActiveCategory = "FROM Category WHERE active = :active";
@@ -104,7 +72,7 @@ public class CategoryDAOImpl implements CategoryDAO {
 	public boolean update(Category category) {
 		
 		try {
-			//Update the category to the database table
+			//Update acategory to the database table
 			
 			sessionFactory.getCurrentSession().update(category);
 			
